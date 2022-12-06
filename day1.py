@@ -4,7 +4,7 @@ raw_data_filename = "day1.txt"
 raw_data = os.path.join(os.path.dirname(__file__), raw_data_filename)
 big_chungus, current_elf = 0, 0
 top_elfs = []
-
+top_three = ""
 with open(raw_data) as file:
     for line in file:
         strip_it = line.strip()
@@ -17,8 +17,9 @@ with open(raw_data) as file:
             current_elf = 0 
     print(top_elfs)
     top_elfs.sort(reverse=True)
-    print(top_elfs)
-    print(sum(top_elfs[3:]))
+    top_three = top_elfs[:3]
+    print(top_three)
+    print(sum(top_three))
 
 
 #print(f"Big chungus is the snack plug with {big_chungus} kcals.") #part 1 answer
