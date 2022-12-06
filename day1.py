@@ -16,9 +16,9 @@ with open(raw_data) as file:
                 top_elfs.append(big_chungus)
             current_elf = 0 
     print(top_elfs)
-    top_elfs.sort()
+    top_elfs.sort(reverse=True)
     print(top_elfs)
-    print(sum(top_elfs))
+    print(sum(top_elfs[3:]))
 
 
 #print(f"Big chungus is the snack plug with {big_chungus} kcals.") #part 1 answer
